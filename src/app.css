@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black-green: hsl(124, 100%, 6%);
+    --dark-green: hsl(113, 42%, 20%);
+    --dgreen: hsl(94, 39%, 32%);
+    --light-green: hsl(81, 38%, 45%);
+    --green-yellow: hsl(70, 52%, 58%);
+    --yellow: hsl(60, 92%, 71%);
+    --blueish: #d8f9da;
+}
+
+body {
+    background-color: aliceblue;
+    font-size: 20px;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--black-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px 100px;
+}
+.logo {
+    flex: 1;
+    padding: 20px;
+}
+.items {
+    flex: 1;
+}
+.items > * {
+    padding: 10px;
+}
+
+/* Home */
+
+.home {
+}
