@@ -4,7 +4,7 @@
 }
 
 :root {
-    --black-green: hsl(124, 100%, 6%);
+    --black-green: hsl(124, 100%, 3%);
     --dark-green: hsl(113, 42%, 20%);
     --dgreen: hsl(94, 39%, 32%);
     --light-green: hsl(81, 38%, 45%);
@@ -18,7 +18,10 @@ body {
     font-size: 20px;
 }
 
-/* Navbar */
+/* =========
+    Navbar 
+   =========
+*/
 
 .navbar {
     background-color: var(--black-green);
@@ -26,20 +29,58 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 10px 100px;
+    padding: 5px 100px;
 }
 .logo {
     flex: 1;
     padding: 20px;
 }
-.items {
+.pages {
     flex: 1;
 }
-.items > * {
-    padding: 10px;
+.pages > span {
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+.pages > span:hover {
+    color: hsl(60, 92%, 41%);
+    cursor: pointer;
 }
 
-/* Home */
+/* ==========
+      Home 
+   ==========
+*/
 
-.home {
+.header {
+    width: 100%;
+    height: 300px;
+}
+.header > .header-bg {
+    background-image: url('images/headerWatch.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 20px 60px;
+}
+
+.header > .header-bg > button {
+    background-color: hsl(60, 56%, 90%);
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-left: 80px;
+    font-size: 30px;
+    transition: 0.3s;
+}
+.header-bg > button:hover {
+    background-color: hsl(60, 56%, 70%);
+    cursor: pointer;
+    transform: scale(1.2);
 }
