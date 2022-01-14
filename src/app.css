@@ -84,3 +84,24 @@ body {
     cursor: pointer;
     transform: scale(1.2);
 }
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* ========
+    Card
+   ========
+*/
+
+.product {
+    width: 19rem;
+    border: 1px solid lightgray;
+}
+.product-img {
+    object-fit: cover;
+}
