@@ -1,9 +1,9 @@
 import React from 'react';
-import '../app.css';
-import Product from './Card';
-import watch1 from '../images/watch-1.jpg';
-import watch2 from '../images/watch-2.jpg';
-import watch3 from '../images/watch-3.jpg';
+import '../../app.css';
+import Product from '../Product';
+import watch1 from '../../images/watch-1.jpg';
+import watch2 from '../../images/watch-2.jpg';
+import watch3 from '../../images/watch-3.jpg';
 
 const Home = () => {
     const productImages = [watch1, watch2, watch3];

@@ -78,6 +78,7 @@ body {
     margin-left: 80px;
     font-size: 30px;
     transition: 0.3s;
+    z-index: 5;
 }
 .header-bg > button:hover {
     background-color: hsl(60, 56%, 70%);
@@ -91,6 +92,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
+    margin: 20px;
 }
 
 /* ========
