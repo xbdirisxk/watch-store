@@ -38,11 +38,13 @@ body {
 .pages {
     flex: 1;
 }
-.pages > span {
+.pages > * {
+    text-decoration: none;
+    color: white;
     padding: 5px 10px;
     transition: 0.3s;
 }
-.pages > span:hover {
+.pages > *:hover {
     color: hsl(60, 92%, 41%);
     cursor: pointer;
 }
