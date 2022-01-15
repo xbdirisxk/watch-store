@@ -1,12 +1,13 @@
 import React from 'react';
 import '../../app.css';
 import Product from '../Product';
-import watch1 from '../../images/watch-1.jpg';
-import watch2 from '../../images/watch-2.jpg';
-import watch3 from '../../images/watch-3.jpg';
+
+import Blancpain from '../../images/1-Blancpain.jpg';
+import Harry from '../../images/2-Harry-Winston.jpg';
+import Frederique from '../../images/3-Frédérique-Constant.jpg';
 
 const Home = () => {
-    const productImages = [watch1, watch2, watch3];
+    const productImages = [Blancpain, Harry, Frederique];
     return (
         <main className='header'>
             <div className='header-bg'>
@@ -14,7 +15,11 @@ const Home = () => {
             </div>
             <div className='products gap-2'>
                 {productImages.map((productImg) => (
-                    <Product Image={productImg} />
+                    <Product
+                        imgUrl={productImg}
+                        title={'wrist watch'}
+                        price={'59$'}
+                    />
                 ))}
             </div>
         </main>

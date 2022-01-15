@@ -57,7 +57,7 @@ body {
     height: 300px;
 }
 .header > .header-bg {
-    background-image: url('images/headerWatch.jpg');
+    background-image: url('images/0-headerWatch.jpg');
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
