@@ -3,38 +3,30 @@
     padding: 0;
 }
 
-:root {
-    --black-green: hsl(124, 100%, 3%);
-    --dark-green: hsl(113, 42%, 20%);
-    --dgreen: hsl(94, 39%, 32%);
-    --light-green: hsl(81, 38%, 45%);
-    --green-yellow: hsl(70, 52%, 58%);
-    --yellow: hsl(60, 92%, 71%);
-    --blueish: #d8f9da;
-}
-
 body {
     background-color: aliceblue;
     font-size: 20px;
+    text-align: center;
 }
 
 /* =========
     Navbar 
-   =========
-*/
+   ========= */
 
 .navbar {
-    background-color: var(--black-green);
+    background-color: hsl(124, 100%, 3%);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     padding: 5px 100px;
+    text-align: left;
 }
 .logo {
     flex: 1;
     padding: 20px;
 }
+
 .pages {
     flex: 1;
 }
@@ -48,11 +40,18 @@ body {
     color: hsl(60, 92%, 41%);
     cursor: pointer;
 }
+.nav-cart > * {
+    text-decoration: none;
+    color: white;
+}
+.nav-cart > *:hover {
+    color: hsl(60, 92%, 81%);
+    cursor: pointer;
+}
 
 /* ==========
       Home 
-   ==========
-*/
+   ========== */
 
 .header {
     width: 100%;
@@ -88,19 +87,35 @@ body {
     transform: scale(1.2);
 }
 
-.products {
+.products-overview {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
     margin: 20px;
+    text-align: left;
+}
+
+/* =========
+    Products
+   ========= */
+
+.products {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    margin: 40px;
+    text-align: left;
 }
 
 /* ========
-    Card
-   ========
-*/
+    Product (card)
+   ======== */
 
 .product {
     width: 19rem;

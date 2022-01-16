@@ -13,7 +13,7 @@ const Home = () => {
             <div className='header-bg'>
                 <button>Shop now</button>
             </div>
-            <div className='products gap-2'>
+            <div className='products-overview gap-2'>
                 {productImages.map((productImg) => (
                     <Product
                         imgUrl={productImg}

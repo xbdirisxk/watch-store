@@ -11,6 +11,11 @@ const Navbar = () => {
                 <Link to='/products'>Products</Link>
                 <Link to='/contact'>Contacts</Link>
             </div>
+            <div className='nav-cart'>
+                <Link to='/carts'>
+                    <span className='fa fa-shopping-cart'></span>
+                </Link>
+            </div>
         </nav>
     );
 };
