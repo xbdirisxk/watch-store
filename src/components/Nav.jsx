@@ -9,11 +9,11 @@ const Navbar = () => {
             <div className='pages'>
                 <Link to='/'>Home</Link>
                 <Link to='/products'>Products</Link>
-                <Link to='/contact'>Contacts</Link>
+                <Link to='/contacts'>Contacts</Link>
             </div>
             <div className='nav-cart'>
                 <Link to='/carts'>
-                    <span className='fa fa-shopping-cart'></span>
+                    <span className='fa fa-shopping-cart'> 0 </span>
                 </Link>
             </div>
         </nav>

@@ -44,17 +44,32 @@ const Main = () => {
         { id: 11, title: 'Fossil', price: 1996, imgUrl: Fossil },
         { id: 12, title: 'wirst watch', price: 77, imgUrl: wirstWatch },
     ]);
+
+    const [carts, setCarts] = useState([]);
+
+    const addToCarts = (id) => {
+        const item = products.filter((product) => product.id === id);
+        const oldCarts = carts;
+        const newCarts = oldCarts.concat(item);
+        return setCarts(newCarts);
+    };
     return (
         <BrowserRouter>
+            {console.log(carts)}
             <Navbar />
             <Routes>
                 <Route path='/' element={<Home />}></Route>
                 <Route
                     path='/products'
-                    element={<Products products={products} />}
+                    element={
+                        <Products
+                            products={products}
+                            handleClick={addToCarts}
+                        />
+                    }
                 ></Route>
                 <Route path='/contacts' element={<Contacts />}></Route>
-                <Route path='/carts' element={<Carts />}></Route>
+                <Route path='/carts' element={<Carts carts={carts} />}></Route>
             </Routes>
         </BrowserRouter>
     );

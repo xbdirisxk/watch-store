@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../app.css';
 
-const Product = ({ title, imgUrl, price }) => {
+const Product = ({ productId, title, imgUrl, price, handleClick }) => {
     return (
         <Card className='product gap-2'>
             <Card.Img
@@ -15,7 +15,12 @@ const Product = ({ title, imgUrl, price }) => {
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{price}$</Card.Text>
-                <Button variant='primary'>Add to cart</Button>
+                <Button
+                    variant='primary'
+                    onClick={() => handleClick(productId)}
+                >
+                    Add to cart
+                </Button>
             </Card.Body>
         </Card>
     );
