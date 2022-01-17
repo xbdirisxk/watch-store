@@ -1,19 +1,60 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 import '../../app.css';
+
+import Blancpain from '../../images/1-Blancpain.jpg';
 
 const Carts = ({ carts }) => {
     return (
-        <>
-            {/* {console.log(carts[0].imgUrl)} */}
-            <h2>Carts</h2>
-            <div className='list-carts'>
+        <div className='main-carts'>
+            <h1>Carts</h1>
+            <Table
+                className='list-carts'
+                striped
+                bordered
+                hover
+                responsive='md'
+            >
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
                 {carts.map((cart) => (
-                    <Card className='product gap-2'>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img
+                                    src={cart.imgUrl}
+                                    alt='table pic'
+                                    style={{ width: '120px', height: '100px' }}
+                                />
+                            </td>
+                            <td>{cart.title}</td>
+                            <td>{cart.price}</td>
+                            <td>no quantity</td>
+                            <td>no Subtotal</td>
+                        </tr>
+                    </tbody>
+                ))}
+            </Table>
+            <h2>Total Price: $$$$</h2>
+        </div>
+    );
+};
+
+export default Carts;
+
+/* <div className='list-carts'>
+                {carts.map((cart) => (
+                    <Card className='product-in-cart gap-2'>
                         <Card.Img
                             variant='top'
-                            style={{ width: '100%', height: '250px' }}
+                            style={{ width: '100%', height: '150px' }}
                             src={cart.imgUrl}
                             className='product-img'
                         />
@@ -24,9 +65,4 @@ const Carts = ({ carts }) => {
                         </Card.Body>
                     </Card>
                 ))}
-            </div>
-        </>
-    );
-};
-
-export default Carts;
+            </div> */

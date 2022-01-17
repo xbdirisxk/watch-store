@@ -129,6 +129,18 @@ body {
     Carts 
    ======= */
 
-.list-carts {
+.main-carts {
     display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: 10px;
+}
+.main-carts > h1 {
+    flex: 1;
+}
+.main-carts > .list-carts {
+    flex: 2;
+    max-width: 800px;
+    margin: 20px;
 }
