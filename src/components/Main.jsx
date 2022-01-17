@@ -48,15 +48,35 @@ const Main = () => {
     const [carts, setCarts] = useState([]);
 
     const addToCarts = (id) => {
-        const item = products.filter((product) => product.id === id);
-        const oldCarts = carts;
-        const newCarts = oldCarts.concat(item);
-        return setCarts(newCarts);
+        let item = products.filter((product) => product.id === id)[0];
+        if (checkItem(item)) {
+            console.log('yes it is in the carts');
+            console.log('ITEM', item.id);
+            return setCarts(
+                carts.map((cart) =>
+                    cart.id === id
+                        ? { ...cart, quantity: cart.quantity + 1 }
+                        : cart
+                )
+            );
+        } else {
+            console.log('it is not in the cart');
+            item = { ...item, quantity: 1 };
+            const newCarts = carts.concat(item);
+
+            return setCarts(newCarts);
+        }
     };
+
+    const checkItem = (item) =>
+        carts
+            .map((cart) => (cart.id === item.id ? true : false))
+            .includes(true);
+
     return (
         <BrowserRouter>
             {console.log(carts)}
-            <Navbar />
+            <Navbar CartLength={carts.length} />
             <Routes>
                 <Route path='/' element={<Home />}></Route>
                 <Route
