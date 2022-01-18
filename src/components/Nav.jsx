@@ -5,7 +5,10 @@ import '../app.css';
 const Navbar = ({ CartLength }) => {
     return (
         <nav className='navbar'>
-            <h2 className='logo'>Watch Store</h2>
+            <NavLink to='/' className='logo'>
+                <h2>Watch Store</h2>
+            </NavLink>
+
             <div className='pages'>
                 <NavLink
                     to='/'

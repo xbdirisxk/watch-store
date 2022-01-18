@@ -18,13 +18,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     padding: 5px 100px;
     text-align: left;
 }
+
 .logo {
     flex: 1;
     padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.logo:hover {
+    color: #fff;
+    cursor: default;
 }
 
 .pages {
@@ -162,6 +169,7 @@ body {
     transition: 0.2s;
 }
 .quantity-btns:hover {
+    background-color: hsl(0, 0%, 88%);
+    transform: scale(1.3);
     cursor: pointer;
-    background-color: lightgray;
 }

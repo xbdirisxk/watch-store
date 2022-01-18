@@ -8,6 +8,7 @@ import Frederique from '../../images/3-Frédérique-Constant.jpg';
 
 const Home = () => {
     const productImages = [Blancpain, Harry, Frederique];
+    let num = 0;
     return (
         <main className='header'>
             <div className='header-bg'>
@@ -16,6 +17,7 @@ const Home = () => {
             <div className='products-overview gap-2'>
                 {productImages.map((productImg) => (
                     <Product
+                        key={num++}
                         imgUrl={productImg}
                         title={'wrist watch'}
                         price={'59$'}

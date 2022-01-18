@@ -39,16 +39,17 @@ const Carts = ({ carts, incrementQuantity, decrementQuantity }) => {
                                     <span className='quantity-num'>
                                         {cart.quantity}
                                     </span>
-                                    <span
-                                        className='fa fa-plus quantity-btns'
-                                        onClick={() =>
-                                            incrementQuantity(cart.id)
-                                        }
-                                    ></span>
+
                                     <span
                                         className='fa fa-minus quantity-btns'
                                         onClick={() =>
                                             decrementQuantity(cart.id)
+                                        }
+                                    ></span>
+                                    <span
+                                        className='fa fa-plus quantity-btns'
+                                        onClick={() =>
+                                            incrementQuantity(cart.id)
                                         }
                                     ></span>
                                 </div>
@@ -64,6 +65,7 @@ const Carts = ({ carts, incrementQuantity, decrementQuantity }) => {
                     (total, cart) => total + cart.price * cart.quantity,
                     0
                 )}
+                $
             </h2>
         </div>
     );
