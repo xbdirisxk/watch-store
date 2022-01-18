@@ -2,8 +2,6 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import '../../app.css';
 
-import Blancpain from '../../images/1-Blancpain.jpg';
-
 const Carts = ({ carts }) => {
     return (
         <div className='main-carts'>
@@ -24,8 +22,8 @@ const Carts = ({ carts }) => {
                         <th>Subtotal</th>
                     </tr>
                 </thead>
-                {carts.map((cart) => (
-                    <tbody>
+                <tbody>
+                    {carts.map((cart) => (
                         <tr>
                             <td>
                                 <img
@@ -35,12 +33,20 @@ const Carts = ({ carts }) => {
                                 />
                             </td>
                             <td>{cart.title}</td>
-                            <td>{cart.price}</td>
-                            <td>no quantity</td>
-                            <td>no Subtotal</td>
+                            <td>{cart.price}$</td>
+                            <td>
+                                <div className='quantity-column'>
+                                    <span className='quantity-num'>
+                                        {cart.quantity}
+                                    </span>
+                                    <span className='fa fa-plus quantity-btns'></span>
+                                    <span className='fa fa-minus quantity-btns'></span>
+                                </div>
+                            </td>
+                            <td>{cart.price * cart.quantity}$</td>
                         </tr>
-                    </tbody>
-                ))}
+                    ))}
+                </tbody>
             </Table>
             <h2>Total Price: $$$$</h2>
         </div>
