@@ -1,20 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../app.css';
 
-const Navbar = () => {
+const Navbar = ({ CartLength }) => {
     return (
         <nav className='navbar'>
             <h2 className='logo'>Watch Store</h2>
             <div className='pages'>
-                <Link to='/'>Home</Link>
-                <Link to='/products'>Products</Link>
-                <Link to='/contacts'>Contacts</Link>
+                <NavLink
+                    to='/'
+                    style={({ isActive }) =>
+                        isActive ? { color: '#c9c908' } : null
+                    }
+                >
+                    Home
+                </NavLink>
+                <NavLink
+                    to='products'
+                    style={({ isActive }) =>
+                        isActive ? { color: '#c9c908' } : null
+                    }
+                >
+                    Products
+                </NavLink>
+                <NavLink
+                    to='contacts'
+                    style={({ isActive }) =>
+                        isActive ? { color: '#c9c908' } : null
+                    }
+                >
+                    Contacts
+                </NavLink>
             </div>
             <div className='nav-cart'>
-                <Link to='/carts'>
-                    <span className='fa fa-shopping-cart'> 0 </span>
-                </Link>
+                <NavLink
+                    to='carts'
+                    style={({ isActive }) =>
+                        isActive ? { color: '#c9c908' } : null
+                    }
+                >
+                    <span className='fa fa-shopping-cart'> {CartLength} </span>
+                </NavLink>
             </div>
         </nav>
     );
