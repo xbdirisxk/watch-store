@@ -2,7 +2,7 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import '../../app.css';
 
-const Carts = ({ carts }) => {
+const Carts = ({ carts, incrementQuantity, decrementQuantity }) => {
     return (
         <div className='main-carts'>
             <h1>Carts</h1>
@@ -39,8 +39,18 @@ const Carts = ({ carts }) => {
                                     <span className='quantity-num'>
                                         {cart.quantity}
                                     </span>
-                                    <span className='fa fa-plus quantity-btns'></span>
-                                    <span className='fa fa-minus quantity-btns'></span>
+                                    <span
+                                        className='fa fa-plus quantity-btns'
+                                        onClick={() =>
+                                            incrementQuantity(cart.id)
+                                        }
+                                    ></span>
+                                    <span
+                                        className='fa fa-minus quantity-btns'
+                                        onClick={() =>
+                                            decrementQuantity(cart.id)
+                                        }
+                                    ></span>
                                 </div>
                             </td>
                             <td>{cart.price * cart.quantity}$</td>

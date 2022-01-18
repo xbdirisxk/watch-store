@@ -49,9 +49,13 @@ const Main = () => {
 
     const addToCarts = (id) => {
         let item = products.filter((product) => product.id === id)[0];
+
+        const checkItem = (item) =>
+            carts
+                .map((cart) => (cart.id === item.id ? true : false))
+                .includes(true);
+
         if (checkItem(item)) {
-            console.log('yes it is in the carts');
-            console.log('ITEM', item.id);
             return setCarts(
                 carts.map((cart) =>
                     cart.id === id
@@ -60,18 +64,26 @@ const Main = () => {
                 )
             );
         } else {
-            console.log('it is not in the cart');
             item = { ...item, quantity: 1 };
             const newCarts = carts.concat(item);
-
             return setCarts(newCarts);
         }
     };
 
-    const checkItem = (item) =>
-        carts
-            .map((cart) => (cart.id === item.id ? true : false))
-            .includes(true);
+    const incrementQuantity = (id) =>
+        setCarts(
+            carts.map((cart) =>
+                cart.id === id ? { ...cart, quantity: cart.quantity + 1 } : cart
+            )
+        );
+    const decrementQuantity = (id) =>
+        setCarts(
+            carts.map((cart) =>
+                cart.id === id && cart.quantity > 1
+                    ? { ...cart, quantity: cart.quantity - 1 }
+                    : cart
+            )
+        );
 
     return (
         <BrowserRouter>
@@ -89,7 +101,16 @@ const Main = () => {
                     }
                 ></Route>
                 <Route path='/contacts' element={<Contacts />}></Route>
-                <Route path='/carts' element={<Carts carts={carts} />}></Route>
+                <Route
+                    path='/carts'
+                    element={
+                        <Carts
+                            carts={carts}
+                            incrementQuantity={incrementQuantity}
+                            decrementQuantity={decrementQuantity}
+                        />
+                    }
+                ></Route>
             </Routes>
         </BrowserRouter>
     );
