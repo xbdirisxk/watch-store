@@ -58,27 +58,15 @@ const Carts = ({ carts, incrementQuantity, decrementQuantity }) => {
                     ))}
                 </tbody>
             </Table>
-            <h2>Total Price: $$$$</h2>
+            <h2>
+                Total Price:{' '}
+                {carts.reduce(
+                    (total, cart) => total + cart.price * cart.quantity,
+                    0
+                )}
+            </h2>
         </div>
     );
 };
 
 export default Carts;
-
-/* <div className='list-carts'>
-                {carts.map((cart) => (
-                    <Card className='product-in-cart gap-2'>
-                        <Card.Img
-                            variant='top'
-                            style={{ width: '100%', height: '150px' }}
-                            src={cart.imgUrl}
-                            className='product-img'
-                        />
-                        <Card.Body>
-                            <Card.Title>{cart.title}</Card.Title>
-                            <Card.Text>{cart.price}$</Card.Text>
-                            <Button variant='primary'>Add to cart</Button>
-                        </Card.Body>
-                    </Card>
-                ))}
-            </div> */
