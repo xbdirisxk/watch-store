@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/watch-store/static/css/main.66f24170.css",
-    "main.js": "/watch-store/static/js/main.76c9df30.js",
-    "static/media/8-techy-watch.jpg": "/watch-store/static/media/8-techy-watch.de685c0de386125bf6af.jpg",
-    "static/media/7-Rolex-Datejust.jpg": "/watch-store/static/media/7-Rolex-Datejust.9158dee872500adcec98.jpg",
-    "static/media/4-Tag-Heuer.jpg": "/watch-store/static/media/4-Tag-Heuer.8b0d5e61971ddbe237b6.jpg",
-    "static/media/11-fossil-watch.jpg": "/watch-store/static/media/11-fossil-watch.11ba28b53852652b5a67.jpg",
-    "static/media/0-headerWatch.jpg": "/watch-store/static/media/0-headerWatch.4ae9864e9af3be3bd54b.jpg",
-    "static/media/1-Blancpain.jpg": "/watch-store/static/media/1-Blancpain.f4abd2debc0cec46a1af.jpg",
-    "static/media/12-wirst-watch.jpg": "/watch-store/static/media/12-wirst-watch.d7bacf974416675dd4c7.jpg",
-    "static/media/9-Zenith.jpg": "/watch-store/static/media/9-Zenith.d7f42b9a57f215972e8c.jpg",
-    "static/media/2-Harry-Winston.jpg": "/watch-store/static/media/2-Harry-Winston.27da8ac8c6d0e5dd0e6c.jpg",
-    "static/media/6-Audemars-Piguet.jpg": "/watch-store/static/media/6-Audemars-Piguet.e6eda55c4788b549ef59.jpg",
-    "static/media/3-Frédérique-Constant.jpg": "/watch-store/static/media/3-Frédérique-Constant.56855fcfa5bc2b51f10e.jpg",
-    "static/media/10-MeisterSinger.jpg": "/watch-store/static/media/10-MeisterSinger.5b9191d576ae87137070.jpg",
-    "static/media/5-Vacheron-Constantin.jpg": "/watch-store/static/media/5-Vacheron-Constantin.b49bcdcde7fc0c015e02.jpg",
-    "index.html": "/watch-store/index.html",
-    "main.66f24170.css.map": "/watch-store/static/css/main.66f24170.css.map",
-    "main.76c9df30.js.map": "/watch-store/static/js/main.76c9df30.js.map"
+    "main.css": "/static/css/main.a7d36a84.css",
+    "main.js": "/static/js/main.b06be9e9.js",
+    "static/media/8-techy-watch.jpg": "/static/media/8-techy-watch.de685c0de386125bf6af.jpg",
+    "static/media/7-Rolex-Datejust.jpg": "/static/media/7-Rolex-Datejust.9158dee872500adcec98.jpg",
+    "static/media/4-Tag-Heuer.jpg": "/static/media/4-Tag-Heuer.8b0d5e61971ddbe237b6.jpg",
+    "static/media/11-fossil-watch.jpg": "/static/media/11-fossil-watch.11ba28b53852652b5a67.jpg",
+    "static/media/0-headerWatch.jpg": "/static/media/0-headerWatch.4ae9864e9af3be3bd54b.jpg",
+    "static/media/1-Blancpain.jpg": "/static/media/1-Blancpain.f4abd2debc0cec46a1af.jpg",
+    "static/media/12-wirst-watch.jpg": "/static/media/12-wirst-watch.d7bacf974416675dd4c7.jpg",
+    "static/media/9-Zenith.jpg": "/static/media/9-Zenith.d7f42b9a57f215972e8c.jpg",
+    "static/media/2-Harry-Winston.jpg": "/static/media/2-Harry-Winston.27da8ac8c6d0e5dd0e6c.jpg",
+    "static/media/6-Audemars-Piguet.jpg": "/static/media/6-Audemars-Piguet.e6eda55c4788b549ef59.jpg",
+    "static/media/3-Frédérique-Constant.jpg": "/static/media/3-Frédérique-Constant.56855fcfa5bc2b51f10e.jpg",
+    "static/media/10-MeisterSinger.jpg": "/static/media/10-MeisterSinger.5b9191d576ae87137070.jpg",
+    "static/media/5-Vacheron-Constantin.jpg": "/static/media/5-Vacheron-Constantin.b49bcdcde7fc0c015e02.jpg",
+    "index.html": "/index.html",
+    "main.a7d36a84.css.map": "/static/css/main.a7d36a84.css.map",
+    "main.b06be9e9.js.map": "/static/js/main.b06be9e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.66f24170.css",
-    "static/js/main.76c9df30.js"
+    "static/css/main.a7d36a84.css",
+    "static/js/main.b06be9e9.js"
   ]
 }
