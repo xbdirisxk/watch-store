@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../app.css';
 import Product from '../Product';
 
@@ -7,7 +8,7 @@ const Home = ({ products }) => {
     return (
         <main className='header'>
             <div className='header-bg'>
-                <button>Shop now</button>
+                <Link to='/products'>Shop now</Link>
             </div>
             <div className='products-overview gap-2'>
                 {RandomProducts.map((product) => (
