@@ -179,3 +179,41 @@ body {
 /* =======
     Contacts
    ======= */
+h3 {
+    text-decoration: underline;
+    font-size: 30px;
+    margin-top: 30px;
+    cursor: default;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.contacts > * {
+    margin: 10px;
+    padding: 5px 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.social-media > * {
+    margin: 10px;
+    padding: 5px 20px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+}
