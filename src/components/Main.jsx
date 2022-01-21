@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './/Nav';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -89,11 +89,11 @@ const Main = () => {
         <BrowserRouter>
             <Navbar CartLength={carts.length} />
             <Routes>
-                <Route path='/' element={<Home products={products} />}></Route>
+                <Route path='/' element={<Home products={products} />} />
                 <Route
                     path='/watch-store'
                     element={<Home products={products} />}
-                ></Route>
+                />
                 <Route
                     path='/products'
                     element={
@@ -102,8 +102,8 @@ const Main = () => {
                             handleClick={addToCarts}
                         />
                     }
-                ></Route>
-                <Route path='/contacts' element={<Contacts />}></Route>
+                />
+                <Route path='/contacts' element={<Contacts />} />
                 <Route
                     path='/carts'
                     element={
@@ -113,7 +113,22 @@ const Main = () => {
                             decrementQuantity={decrementQuantity}
                         />
                     }
-                ></Route>
+                />
+                <Route
+                    path='*'
+                    element={
+                        <div>
+                            <p style={{ fontSize: 30 }}>
+                                this path doesn't exist
+                            </p>
+                            <Link to='/'>
+                                <button style={{ border: 1, padding: 10 }}>
+                                    Go to Home page
+                                </button>
+                            </Link>
+                        </div>
+                    }
+                />
             </Routes>
         </BrowserRouter>
     );
