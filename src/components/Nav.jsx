@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../app.css';
 
-const Navbar = ({ CartLength }) => {
+const Navbar = ({ CartsQuantity }) => {
     return (
         <nav className='navbar'>
             <NavLink to='/' className='logo'>
@@ -42,7 +42,10 @@ const Navbar = ({ CartLength }) => {
                         isActive ? { color: '#c9c908' } : null
                     }
                 >
-                    <span className='fa fa-shopping-cart'> {CartLength} </span>
+                    <span className='fa fa-shopping-cart'>
+                        {' '}
+                        {CartsQuantity}
+                    </span>
                 </NavLink>
             </div>
         </nav>

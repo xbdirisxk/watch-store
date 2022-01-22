@@ -87,7 +87,12 @@ const Main = () => {
 
     return (
         <BrowserRouter>
-            <Navbar CartLength={carts.length} />
+            <Navbar
+                CartsQuantity={carts.reduce(
+                    (total, cart) => total + cart.quantity,
+                    0
+                )}
+            />
             <Routes>
                 <Route path='/' element={<Home products={products} />} />
                 <Route
