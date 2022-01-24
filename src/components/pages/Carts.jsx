@@ -2,7 +2,7 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import '../../app.css';
 
-const Carts = ({ carts, incrementQuantity, decrementQuantity }) => {
+const Carts = ({ carts, incrementQuantity, decrementQuantity, RemoveItem }) => {
     return (
         <div className='main-carts'>
             <h1>Carts</h1>
@@ -23,6 +23,7 @@ const Carts = ({ carts, incrementQuantity, decrementQuantity }) => {
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>Subtotal</th>
+                            <th>Remove</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,6 +62,12 @@ const Carts = ({ carts, incrementQuantity, decrementQuantity }) => {
                                     </div>
                                 </td>
                                 <td>{cart.price * cart.quantity}$</td>
+                                <td>
+                                    <span
+                                        className='fa fa-trash delete-icon'
+                                        onClick={() => RemoveItem(cart.id)}
+                                    ></span>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

@@ -84,6 +84,8 @@ const Main = () => {
                     : cart
             )
         );
+    const removeItemFromCart = (id) =>
+        setCarts(carts.filter((cart) => cart.id !== id));
 
     return (
         <BrowserRouter>
@@ -116,6 +118,7 @@ const Main = () => {
                             carts={carts}
                             incrementQuantity={incrementQuantity}
                             decrementQuantity={decrementQuantity}
+                            RemoveItem={removeItemFromCart}
                         />
                     }
                 />
