@@ -18,7 +18,7 @@ npm start
 -   [ReactJS](https://reactjs.org/)
 -   [React Router V6](https://reactrouter.com/)
 -   [React Bootstrap](https://react-bootstrap.github.io/)
--   [FontAwsome Icons](https://fontawesome.com/)
+-   [React-icons](https://react-icons.github.io/react-icons)
 -   [ESLint Code Style](https://eslint.org/)
 -   [Prettier formatter Extention](https://prettier.io/)
 -   [Pexels Images](https://www.pexels.com/search/watches/)

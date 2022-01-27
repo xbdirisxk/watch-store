@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { BsCart2 } from 'react-icons/bs';
 import '../app.css';
 
 const Navbar = ({ CartsQuantity }) => {
@@ -42,10 +43,7 @@ const Navbar = ({ CartsQuantity }) => {
                         isActive ? { color: '#c9c908' } : null
                     }
                 >
-                    <span className='fa fa-shopping-cart'>
-                        {' '}
-                        {CartsQuantity}
-                    </span>
+                    <BsCart2 /> {CartsQuantity}
                 </NavLink>
             </div>
         </nav>

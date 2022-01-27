@@ -1,5 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import { FiDelete } from 'react-icons/fi';
+import { MdExpandLess, MdExpandMore } from 'react-icons/md';
 import '../../app.css';
 
 const Carts = ({ carts, incrementQuantity, decrementQuantity, RemoveItem }) => {
@@ -47,26 +49,26 @@ const Carts = ({ carts, incrementQuantity, decrementQuantity, RemoveItem }) => {
                                             {cart.quantity}
                                         </span>
 
-                                        <span
-                                            className='fa fa-minus quantity-btns'
+                                        <MdExpandMore
+                                            className='quantity-btns'
                                             onClick={() =>
                                                 decrementQuantity(cart.id)
                                             }
-                                        ></span>
-                                        <span
-                                            className='fa fa-plus quantity-btns'
+                                        />
+                                        <MdExpandLess
+                                            className='quantity-btns'
                                             onClick={() =>
                                                 incrementQuantity(cart.id)
                                             }
-                                        ></span>
+                                        />
                                     </div>
                                 </td>
                                 <td>{cart.price * cart.quantity}$</td>
                                 <td>
-                                    <span
-                                        className='fa fa-trash delete-icon'
+                                    <FiDelete
+                                        className='delete-icon'
                                         onClick={() => RemoveItem(cart.id)}
-                                    ></span>
+                                    />
                                 </td>
                             </tr>
                         ))}
