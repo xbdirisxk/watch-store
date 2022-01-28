@@ -10,6 +10,7 @@ const Home = ({ products }) => {
             <div className='header-bg'>
                 <Link to='/products'>Shop now</Link>
             </div>
+            <h3>Products Overview</h3>
             <div className='products-overview gap-2'>
                 {RandomProducts.map((product) => (
                     <Product
@@ -20,6 +21,11 @@ const Home = ({ products }) => {
                     />
                 ))}
             </div>
+            <h4>
+                <Link to='products' style={{ color: '#000' }}>
+                    Show More
+                </Link>
+            </h4>
         </main>
     );
 };
