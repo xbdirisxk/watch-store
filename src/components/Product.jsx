@@ -13,14 +13,16 @@ const Product = ({ productId, title, imgUrl, price, handleClick }) => {
                 className='product-img'
             />
             <Card.Body>
-                <Card.Title>{title}</Card.Title>
-                <Card.Text>{price}$</Card.Text>
-                <Button
-                    variant='primary'
-                    onClick={() => handleClick(productId)}
-                >
-                    Add to cart
-                </Button>
+                <Card.Title className='product-name'>{title}</Card.Title>
+                <Card.Text className='product-price'>{price}$</Card.Text>
+                {handleClick && (
+                    <Button
+                        variant='primary'
+                        onClick={() => handleClick(productId)}
+                    >
+                        Add to cart
+                    </Button>
+                )}
             </Card.Body>
         </Card>
     );
