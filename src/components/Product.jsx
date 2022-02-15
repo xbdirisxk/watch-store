@@ -1,9 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import '../app.css';
+import { useNavigate } from 'react-router-dom';
 
-const Product = ({ productId, title, imgUrl, price, handleClick }) => {
+const Product = ({ productId, title, imgUrl, price, handleAddToCarts }) => {
+    const navigate = useNavigate();
     return (
         <Card className='product gap-2'>
             <Card.Img
@@ -11,14 +12,22 @@ const Product = ({ productId, title, imgUrl, price, handleClick }) => {
                 style={{ width: '100%', height: '250px' }}
                 src={imgUrl}
                 className='product-img'
+                onClick={() => navigate('checkout1')}
             />
+
             <Card.Body>
-                <Card.Title className='product-name'>{title}</Card.Title>
+                <Card.Title
+                    className='product-name'
+                    onClick={() => navigate('checkout1')}
+                >
+                    {title}
+                </Card.Title>
+
                 <Card.Text className='product-price'>{price}$</Card.Text>
-                {handleClick && (
+                {handleAddToCarts && (
                     <Button
                         variant='primary'
-                        onClick={() => handleClick(productId)}
+                        onClick={() => handleAddToCarts(productId)}
                     >
                         Add to cart
                     </Button>

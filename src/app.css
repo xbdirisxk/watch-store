@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* global style */
 body {
     background-color: aliceblue;
     font-size: 20px;
@@ -125,7 +125,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    border-radius: 10px;
     margin: 40px;
     text-align: left;
 }
@@ -136,12 +135,20 @@ body {
 
 .product {
     width: 19rem;
-    border: 1px solid lightgray;
+    border: 1px solid hsl(0, 0%, 70%);
 }
 .product-img {
     object-fit: cover;
+    cursor: pointer;
 }
-
+.product-name:hover {
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: underline;
+}
+.product-price {
+    color: hsl(0, 0%, 37%);
+}
 /* ==========
     Contacts
    ========== */
@@ -230,3 +237,7 @@ h3 {
     color: hsl(0, 100%, 23%);
     transition: 0.2s;
 }
+
+/* ========
+   Checkout 
+   ======== */

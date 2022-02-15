@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from './components/Main';
+import './app.css';
 
 const App = () => {
     return (
@@ -10,4 +11,3 @@ const App = () => {
 };
 
 export default App;
-// shortcut: rafce

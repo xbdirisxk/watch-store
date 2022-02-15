@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Navbar from './/Nav';
+import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
+import Navbar from './Nav';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Contacts from './pages/Contacts';
@@ -17,6 +17,7 @@ import Zenith from '../images/9-Zenith.jpg';
 import Meister from '../images/10-MeisterSinger.jpg';
 import Fossil from '../images/11-fossil-watch.jpg';
 import wirstWatch from '../images/12-wirst-watch.jpg';
+import Checkout from './pages/Checkout';
 
 const Main = () => {
     const [products] = useState([
@@ -44,48 +45,7 @@ const Main = () => {
         { id: 11, title: 'Fossil', price: 1996, imgUrl: Fossil },
         { id: 12, title: 'wirst watch', price: 77, imgUrl: wirstWatch },
     ]);
-
     const [carts, setCarts] = useState([]);
-
-    const addToCarts = (id) => {
-        let item = products.filter((product) => product.id === id)[0];
-
-        const checkItem = (item) =>
-            carts
-                .map((cart) => (cart.id === item.id ? true : false))
-                .includes(true);
-
-        if (checkItem(item)) {
-            return setCarts(
-                carts.map((cart) =>
-                    cart.id === id
-                        ? { ...cart, quantity: cart.quantity + 1 }
-                        : cart
-                )
-            );
-        } else {
-            item = { ...item, quantity: 1 };
-            const newCarts = carts.concat(item);
-            return setCarts(newCarts);
-        }
-    };
-
-    const incrementQuantity = (id) =>
-        setCarts(
-            carts.map((cart) =>
-                cart.id === id ? { ...cart, quantity: cart.quantity + 1 } : cart
-            )
-        );
-    const decrementQuantity = (id) =>
-        setCarts(
-            carts.map((cart) =>
-                cart.id === id && cart.quantity > 1
-                    ? { ...cart, quantity: cart.quantity - 1 }
-                    : cart
-            )
-        );
-    const removeItemFromCart = (id) =>
-        setCarts(carts.filter((cart) => cart.id !== id));
 
     return (
         <BrowserRouter>
@@ -106,27 +66,25 @@ const Main = () => {
                     element={
                         <Products
                             products={products}
-                            handleClick={addToCarts}
+                            carts={carts}
+                            setCarts={setCarts}
                         />
                     }
                 />
+                <Route path='products/checkout1' element={<Checkout />} />
                 <Route path='/contacts' element={<Contacts />} />
                 <Route
                     path='/carts'
-                    element={
-                        <Carts
-                            carts={carts}
-                            incrementQuantity={incrementQuantity}
-                            decrementQuantity={decrementQuantity}
-                            RemoveItem={removeItemFromCart}
-                        />
-                    }
+                    element={<Carts carts={carts} setCarts={setCarts} />}
                 />
+
+                {/* Not Found page */}
+
                 <Route
                     path='*'
                     element={
-                        <div>
-                            <p style={{ fontSize: 30 }}>
+                        <div style={{ margin: 100 }}>
+                            <p style={{ fontSize: 30, maginTop: 30 }}>
                                 this path doesn't exist
                             </p>
                             <Link to='/'>

@@ -2,9 +2,25 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import { FiDelete } from 'react-icons/fi';
 import { MdExpandLess, MdExpandMore } from 'react-icons/md';
-import '../../app.css';
 
-const Carts = ({ carts, incrementQuantity, decrementQuantity, RemoveItem }) => {
+const Carts = ({ carts, setCarts }) => {
+    const incrementQuantity = (id) =>
+        setCarts(
+            carts.map((cart) =>
+                cart.id === id ? { ...cart, quantity: cart.quantity + 1 } : cart
+            )
+        );
+    const decrementQuantity = (id) =>
+        setCarts(
+            carts.map((cart) =>
+                cart.id === id && cart.quantity > 1
+                    ? { ...cart, quantity: cart.quantity - 1 }
+                    : cart
+            )
+        );
+    const removeItemFromCart = (id) =>
+        setCarts(carts.filter((cart) => cart.id !== id));
+
     return (
         <div className='main-carts'>
             <h1>Carts</h1>
@@ -67,7 +83,9 @@ const Carts = ({ carts, incrementQuantity, decrementQuantity, RemoveItem }) => {
                                 <td>
                                     <FiDelete
                                         className='delete-icon'
-                                        onClick={() => RemoveItem(cart.id)}
+                                        onClick={() =>
+                                            removeItemFromCart(cart.id)
+                                        }
                                     />
                                 </td>
                             </tr>

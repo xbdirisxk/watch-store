@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BsCart2 } from 'react-icons/bs';
-import '../app.css';
 
 const Navbar = ({ CartsQuantity }) => {
     return (
