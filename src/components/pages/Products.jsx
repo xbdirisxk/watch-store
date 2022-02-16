@@ -2,7 +2,7 @@ import React from 'react';
 import Product from '../Product';
 import { Outlet } from 'react-router-dom';
 
-const Products = ({ products, carts, setCarts }) => {
+const Products = ({ products, carts, setCarts, handleShow }) => {
     const addToCarts = (id) => {
         let item = products.filter((product) => product.id === id)[0];
 
@@ -38,6 +38,7 @@ const Products = ({ products, carts, setCarts }) => {
                         imgUrl={product.imgUrl}
                         price={product.price}
                         handleAddToCarts={addToCarts}
+                        onClickShow={handleShow}
                     />
                 ))}
             </div>

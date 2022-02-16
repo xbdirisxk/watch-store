@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './Nav';
 import Home from './pages/Home';
@@ -8,6 +8,11 @@ import Carts from './pages/Carts';
 import Checkout from './pages/Checkout';
 
 const Main = ({ products, carts, setCarts }) => {
+    const [showOffcanvas, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <BrowserRouter>
             <Navbar
@@ -15,6 +20,11 @@ const Main = ({ products, carts, setCarts }) => {
                     (total, cart) => total + cart.quantity,
                     0
                 )}
+            />
+            <Checkout
+                show={showOffcanvas}
+                handleShow={handleShow}
+                handleClose={handleClose}
             />
             <Routes>
                 <Route path='/' element={<Home products={products} />} />
@@ -29,10 +39,11 @@ const Main = ({ products, carts, setCarts }) => {
                             products={products}
                             carts={carts}
                             setCarts={setCarts}
+                            handleShow={handleShow}
                         />
                     }
                 />
-                <Route path='products/checkout1' element={<Checkout />} />
+
                 <Route path='/contacts' element={<Contacts />} />
                 <Route
                     path='/carts'
