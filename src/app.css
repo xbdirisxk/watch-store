@@ -1,8 +1,9 @@
+/* global style */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-/* global style */
 body {
     background-color: aliceblue;
     font-size: 20px;
@@ -219,16 +220,16 @@ h3 {
     flex: 2;
     font-size: 23px;
 }
-.quantity-btns {
+.quantity-btn {
     flex: 1;
     border-radius: 50%;
     padding: 2px 0;
-    margin: 2px;
+    margin: 0 3px;
     font-size: 25px;
     transform: scale(1.6);
 }
-.quantity-btns:hover {
-    transform: scale(1.2, 2) translate(0, 4%);
+.quantity-btn:hover {
+    transform: scale(2);
     cursor: pointer;
 }
 

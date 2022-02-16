@@ -46,7 +46,7 @@ const Carts = ({ carts, setCarts }) => {
                     </thead>
                     <tbody>
                         {carts.map((cart) => (
-                            <tr>
+                            <tr key={cart.id}>
                                 <td>
                                     <img
                                         src={cart.imgUrl}
@@ -66,13 +66,14 @@ const Carts = ({ carts, setCarts }) => {
                                         </span>
 
                                         <MdExpandMore
-                                            className='quantity-btns'
+                                            className='quantity-btn'
                                             onClick={() =>
                                                 decrementQuantity(cart.id)
                                             }
                                         />
+
                                         <MdExpandLess
-                                            className='quantity-btns'
+                                            className='quantity-btn'
                                             onClick={() =>
                                                 incrementQuantity(cart.id)
                                             }
