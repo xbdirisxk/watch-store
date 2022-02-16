@@ -1,6 +1,5 @@
 import React from 'react';
 import Product from '../Product';
-import { Outlet } from 'react-router-dom';
 
 const Products = ({ products, carts, setCarts, handleShow }) => {
     const addToCarts = (id) => {
@@ -27,22 +26,19 @@ const Products = ({ products, carts, setCarts, handleShow }) => {
     };
 
     return (
-        <>
-            <Outlet />
-            <div className='products'>
-                {products.map((product) => (
-                    <Product
-                        key={product.id}
-                        productId={product.id}
-                        title={product.title}
-                        imgUrl={product.imgUrl}
-                        price={product.price}
-                        handleAddToCarts={addToCarts}
-                        onClickShow={handleShow}
-                    />
-                ))}
-            </div>
-        </>
+        <div className='products'>
+            {products.map((product) => (
+                <Product
+                    key={product.id}
+                    productId={product.id}
+                    title={product.title}
+                    imgUrl={product.imgUrl}
+                    price={product.price}
+                    handleAddToCarts={addToCarts}
+                    onClickShow={handleShow}
+                />
+            ))}
+        </div>
     );
 };
 

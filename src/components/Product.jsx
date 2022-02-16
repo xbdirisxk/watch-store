@@ -17,18 +17,21 @@ const Product = ({
                 style={{ width: '100%', height: '250px' }}
                 src={imgUrl}
                 className='product-img'
-                onClick={onClickShow}
+                onClick={() => onClickShow(productId)}
             />
 
             <Card.Body>
-                <Card.Title className='product-name' onClick={onClickShow}>
+                <Card.Title
+                    className='product-name'
+                    onClick={() => onClickShow(productId)}
+                >
                     {title}
                 </Card.Title>
 
                 <Card.Text className='product-price'>{price}$</Card.Text>
                 {handleAddToCarts && (
                     <Button
-                        variant='primary'
+                        variant='warning'
                         onClick={() => handleAddToCarts(productId)}
                     >
                         Add to cart

@@ -9,9 +9,14 @@ import Checkout from './pages/Checkout';
 
 const Main = ({ products, carts, setCarts }) => {
     const [showOffcanvas, setShow] = useState(false);
+    const [checkoutItem, setcheckoutItem] = useState(null);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = (id) => {
+        const product = products.filter((products) => products.id === id)[0];
+        setcheckoutItem(product);
+        setShow(true);
+        console.log(product);
+    };
 
     return (
         <BrowserRouter>
@@ -21,11 +26,13 @@ const Main = ({ products, carts, setCarts }) => {
                     0
                 )}
             />
-            <Checkout
-                show={showOffcanvas}
-                handleShow={handleShow}
-                handleClose={handleClose}
-            />
+            {showOffcanvas && (
+                <Checkout
+                    show={showOffcanvas}
+                    setShow={setShow}
+                    Item={checkoutItem}
+                />
+            )}
             <Routes>
                 <Route path='/' element={<Home products={products} />} />
                 <Route

@@ -1,23 +1,32 @@
-import React, { useState } from 'react';
-import { Button, Offcanvas } from 'react-bootstrap';
+import React from 'react';
+import { Button, Offcanvas, Image } from 'react-bootstrap';
 // import PropTypes from 'prop-types';
-//import imageUrl from '../../images/11-fossil-watch.jpg';
+import imageUrl from '../../images/11-fossil-watch.jpg';
 
-const Checkout = ({ show, handleShow, handleClose }) => {
+const Checkout = ({ show, setShow, Item }) => {
+    const handleClose = () => setShow(false);
     return (
-        <>
-            {/* <Button variant='primary'>Launch</Button> */}
-
-            <Offcanvas show={show} onHide={handleClose} placement={'end'}>
-                <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the
-                    elements you have chosen. Like, text, images, lists, etc.
-                </Offcanvas.Body>
-            </Offcanvas>
-        </>
+        <Offcanvas show={show} onHide={handleClose} placement={'end'}>
+            <Offcanvas.Header closeButton>
+                <Offcanvas.Title>{Item.title}</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+                <Image
+                    fluid
+                    thumbnail
+                    src={Item.imgUrl}
+                    alt='product pic'
+                    style={{ width: '70%', height: '50%' }}
+                />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nesciunt hic, voluptas praesentium aperiam ducimus maxime
+                    placeat atque nostrum nobis blanditiis consectetur dolore
+                    dignissimos eveniet quam earum, ad quis soluta maiores.
+                </p>
+                <Button variant='warning'>Add to cart</Button>
+            </Offcanvas.Body>
+        </Offcanvas>
     );
 };
 
