@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router-dom';
 
 const Product = ({
     productId,
@@ -11,7 +10,6 @@ const Product = ({
     handleAddToCarts,
     onClickShow,
 }) => {
-    const navigate = useNavigate();
     return (
         <Card className='product gap-2'>
             <Card.Img
@@ -23,10 +21,7 @@ const Product = ({
             />
 
             <Card.Body>
-                <Card.Title
-                    className='product-name'
-                    onClick={() => navigate('checkout1')}
-                >
+                <Card.Title className='product-name' onClick={onClickShow}>
                     {title}
                 </Card.Title>
 

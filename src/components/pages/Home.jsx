@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Product from '../Product';
+import { useNavigate } from 'react-router-dom';
 
 const Home = ({ products }) => {
     const RandomProducts = products.sort(() => Math.random() - 0.5).slice(0, 3);
+    const navigate = useNavigate();
+    const onClickShowProducts = () => navigate('products');
     return (
         <main className='header'>
             <div className='header-bg'>
@@ -17,6 +20,7 @@ const Home = ({ products }) => {
                         imgUrl={product.imgUrl}
                         title={product.title}
                         price={product.price}
+                        onClickShow={onClickShowProducts}
                     />
                 ))}
             </div>
