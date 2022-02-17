@@ -5,17 +5,18 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Contacts from './pages/Contacts';
 import Carts from './pages/Carts';
-import Checkout from './pages/Checkout';
+import Checkout from './Checkout';
+import Modal from './Modal';
 
 const Main = ({ products, carts, setCarts }) => {
     const [showOffcanvas, setShow] = useState(false);
     const [checkoutItem, setcheckoutItem] = useState(null);
+    const [selectedImg, setSelectedImg] = useState(null);
 
     const handleShow = (id) => {
         const product = products.filter((products) => products.id === id)[0];
         setcheckoutItem(product);
         setShow(true);
-        console.log(product);
     };
 
     const addToCarts = (id) => {
@@ -54,6 +55,13 @@ const Main = ({ products, carts, setCarts }) => {
                     setShow={setShow}
                     Item={checkoutItem}
                     addToCarts={addToCarts}
+                    setSelectedImg={setSelectedImg}
+                />
+            )}
+            {selectedImg && (
+                <Modal
+                    selectedImg={selectedImg}
+                    setSelectedImg={setSelectedImg}
                 />
             )}
             <Routes>

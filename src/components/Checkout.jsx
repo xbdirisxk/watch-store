@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Offcanvas, Image } from 'react-bootstrap';
 
-const Checkout = ({ show, setShow, Item, addToCarts }) => {
+const Checkout = ({ show, setShow, Item, addToCarts, setSelectedImg }) => {
     const handleClose = () => setShow(false);
     return (
         <Offcanvas
@@ -21,6 +21,7 @@ const Checkout = ({ show, setShow, Item, addToCarts }) => {
                     src={Item.imgUrl}
                     alt='product pic'
                     className='image'
+                    onClick={() => setSelectedImg(Item.imgUrl)}
                 />
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
