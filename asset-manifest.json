@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/watch-store/static/css/main.382cc6e9.css",
-    "main.js": "/watch-store/static/js/main.b6acc5b6.js",
+    "main.css": "/watch-store/static/css/main.41af6760.css",
+    "main.js": "/watch-store/static/js/main.85b821fe.js",
     "static/media/8-techy-watch.jpg": "/watch-store/static/media/8-techy-watch.de685c0de386125bf6af.jpg",
     "static/media/7-Rolex-Datejust.jpg": "/watch-store/static/media/7-Rolex-Datejust.9158dee872500adcec98.jpg",
     "static/media/4-Tag-Heuer.jpg": "/watch-store/static/media/4-Tag-Heuer.8b0d5e61971ddbe237b6.jpg",
@@ -16,11 +16,11 @@
     "static/media/10-MeisterSinger.jpg": "/watch-store/static/media/10-MeisterSinger.5b9191d576ae87137070.jpg",
     "static/media/5-Vacheron-Constantin.jpg": "/watch-store/static/media/5-Vacheron-Constantin.b49bcdcde7fc0c015e02.jpg",
     "index.html": "/watch-store/index.html",
-    "main.382cc6e9.css.map": "/watch-store/static/css/main.382cc6e9.css.map",
-    "main.b6acc5b6.js.map": "/watch-store/static/js/main.b6acc5b6.js.map"
+    "main.41af6760.css.map": "/watch-store/static/css/main.41af6760.css.map",
+    "main.85b821fe.js.map": "/watch-store/static/js/main.85b821fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.382cc6e9.css",
-    "static/js/main.b6acc5b6.js"
+    "static/css/main.41af6760.css",
+    "static/js/main.85b821fe.js"
   ]
 }
