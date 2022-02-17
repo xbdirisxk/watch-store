@@ -242,3 +242,23 @@ h3 {
 /* ========
    Checkout 
    ======== */
+.off-canvas {
+    width: 40vw;
+}
+.off-canvas .image {
+    margin-bottom: 10px;
+    max-width: 70%;
+    max-height: 50%;
+}
+.off-canvas .item-price {
+    color: brown;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.btns > * {
+    margin-bottom: 5px;
+    flex: 1;
+}

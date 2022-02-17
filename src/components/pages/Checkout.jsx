@@ -8,17 +8,19 @@ const Checkout = ({ show, setShow, Item, addToCarts }) => {
             show={show}
             onHide={handleClose}
             placement={'end'}
-            style={{ width: '50%' }}
+            className='off-canvas'
         >
             <Offcanvas.Header closeButton>
-                <Offcanvas.Title>{Item.title}</Offcanvas.Title>
+                <Offcanvas.Title style={{ fontSize: 27 }}>
+                    {Item.title}
+                </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
                 <Image
                     thumbnail
                     src={Item.imgUrl}
                     alt='product pic'
-                    style={{ maxWidth: '70%', maxHeight: '50%' }}
+                    className='image'
                 />
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -26,9 +28,17 @@ const Checkout = ({ show, setShow, Item, addToCarts }) => {
                     placeat atque nostrum nobis blanditiis consectetur dolore
                     dignissimos eveniet quam earum, ad quis soluta maiores.
                 </p>
-                <Button variant='warning' onClick={() => addToCarts(Item.id)}>
-                    Add to cart
-                </Button>
+
+                <div className='item-price'>Price: {Item.price}$</div>
+                <div className='btns'>
+                    <Button variant='primary '>Buy it Now</Button>
+                    <Button
+                        variant='warning'
+                        onClick={() => addToCarts(Item.id)}
+                    >
+                        Add to cart
+                    </Button>
+                </div>
             </Offcanvas.Body>
         </Offcanvas>
     );
