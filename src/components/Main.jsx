@@ -10,12 +10,12 @@ import Modal from './Modal';
 
 const Main = ({ products, carts, setCarts }) => {
     const [showOffcanvas, setShow] = useState(false);
-    const [checkoutItem, setcheckoutItem] = useState(null);
+    const [checkItem, setcheckItem] = useState(null);
     const [selectedImg, setSelectedImg] = useState(null);
 
     const handleShow = (id) => {
         const product = products.filter((products) => products.id === id)[0];
-        setcheckoutItem(product);
+        setcheckItem(product);
         setShow(true);
     };
 
@@ -53,7 +53,7 @@ const Main = ({ products, carts, setCarts }) => {
                 <Checkout
                     show={showOffcanvas}
                     setShow={setShow}
-                    Item={checkoutItem}
+                    Item={checkItem}
                     addToCarts={addToCarts}
                     setSelectedImg={setSelectedImg}
                 />

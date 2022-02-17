@@ -24,6 +24,7 @@ npm start
 -   [React Router V6](https://reactrouter.com/) - router tool for react applications.
 -   [React Bootstrap](https://react-bootstrap.github.io/) - styling framework for react components.
 -   [React-icons](https://react-icons.github.io/react-icons) - collection of icons for react
+-   [Framer Motion](https://www.framer.com/motion/) - for animation
 -   [Github-page](https://pages.github.com/) - for Hosting
 -   [ESLint Code Style](https://eslint.org/) - A linter tool to standardize code.
 -   [Prettier formatter Extention](https://prettier.io/) - code formatter extention.
