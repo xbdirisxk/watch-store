@@ -25,7 +25,7 @@ const Home = ({ products }) => {
                 ))}
             </div>
             <h4>
-                <Link to='products' style={{ color: '#000' }}>
+                <Link to='/products' style={{ color: '#000' }}>
                     Show More
                 </Link>
             </h4>

@@ -19,7 +19,7 @@ const Navbar = ({ CartsQuantity }) => {
                     Home
                 </NavLink>
                 <NavLink
-                    to='products'
+                    to='/products'
                     style={({ isActive }) =>
                         isActive ? { color: '#c9c908' } : null
                     }
@@ -27,7 +27,7 @@ const Navbar = ({ CartsQuantity }) => {
                     Products
                 </NavLink>
                 <NavLink
-                    to='contacts'
+                    to='/contacts'
                     style={({ isActive }) =>
                         isActive ? { color: '#c9c908' } : null
                     }
@@ -37,7 +37,7 @@ const Navbar = ({ CartsQuantity }) => {
             </div>
             <div className='nav-cart'>
                 <NavLink
-                    to='carts'
+                    to='/carts'
                     style={({ isActive }) =>
                         isActive ? { color: '#c9c908' } : null
                     }
