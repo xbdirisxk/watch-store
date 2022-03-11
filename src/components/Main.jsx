@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Navbar from './Nav';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -66,10 +66,7 @@ const Main = ({ products, carts, setCarts }) => {
             )}
             <Routes>
                 <Route path='/' element={<Home products={products} />} />
-                <Route
-                    path='/watch-store'
-                    element={<Home products={products} />}
-                />
+                <Route path='/watch-store' element={<Navigate to='/' />} />
                 <Route
                     path='/products'
                     element={

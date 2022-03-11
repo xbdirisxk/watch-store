@@ -1,5 +1,9 @@
 # Watch Store⌚
 
+## LIVE DEMO
+
+[WATCH STORE](https://xbdirisxk.github.io/watch-store/)
+
 ## Getting Started
 
 ```
@@ -8,10 +12,6 @@ cd watch-store
 npm install
 npm start
 ```
-
-## LIVE DEMO
-
-[WATCH STORE](https://xbdirisxk.github.io/watch-store/)
 
 ## Development
 
