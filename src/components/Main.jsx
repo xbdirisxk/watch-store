@@ -66,7 +66,7 @@ const Main = ({ products, carts, setCarts }) => {
             )}
             <Routes>
                 <Route path='/' element={<Home products={products} />} />
-                <Route path='/watch-store' element={<Navigate to='/' />} />
+                <Route path='/watch-store' element={<Navigate replace to='/' />} />
                 <Route
                     path='/products'
                     element={
