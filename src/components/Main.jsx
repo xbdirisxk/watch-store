@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Contacts from './pages/Contacts';
 import Carts from './pages/Carts';
-import Checkout from './Checkout';
+import OffCanvas from './OffCanvas';
 import Modal from './Modal';
 
 const Main = ({ products, carts, setCarts }) => {
@@ -50,7 +50,7 @@ const Main = ({ products, carts, setCarts }) => {
                 )}
             />
             {showOffcanvas && (
-                <Checkout
+                <OffCanvas
                     show={showOffcanvas}
                     setShow={setShow}
                     Item={checkItem}
@@ -66,7 +66,10 @@ const Main = ({ products, carts, setCarts }) => {
             )}
             <Routes>
                 <Route path='/' element={<Home products={products} />} />
-                <Route path='/watch-store' element={<Navigate replace to='/' />} />
+                <Route
+                    path='/watch-store'
+                    element={<Navigate replace to='/' />}
+                />
                 <Route
                     path='/products'
                     element={

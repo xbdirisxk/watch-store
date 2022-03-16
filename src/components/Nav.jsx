@@ -35,7 +35,7 @@ const Navbar = ({ CartsQuantity }) => {
                     Contacts
                 </NavLink>
             </div>
-            <div className='nav-cart'>
+            <div className='cart-icon'>
                 <NavLink
                     to='/carts'
                     style={({ isActive }) =>

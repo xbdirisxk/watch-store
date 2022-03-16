@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Offcanvas, Image } from 'react-bootstrap';
 
-const Checkout = ({ show, setShow, Item, addToCarts, setSelectedImg }) => {
+const OffCanvas = ({ show, setShow, Item, addToCarts, setSelectedImg }) => {
     const handleClose = () => setShow(false);
     return (
         <Offcanvas
@@ -45,4 +45,4 @@ const Checkout = ({ show, setShow, Item, addToCarts, setSelectedImg }) => {
     );
 };
 
-export default Checkout;
+export default OffCanvas;
