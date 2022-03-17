@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/watch-store/static/css/main.d2b6853b.css",
-    "main.js": "/watch-store/static/js/main.e6a523ce.js",
+    "main.js": "/watch-store/static/js/main.26db3747.js",
     "static/media/8-techy-watch.jpg": "/watch-store/static/media/8-techy-watch.de685c0de386125bf6af.jpg",
     "static/media/7-Rolex-Datejust.jpg": "/watch-store/static/media/7-Rolex-Datejust.9158dee872500adcec98.jpg",
     "static/media/4-Tag-Heuer.jpg": "/watch-store/static/media/4-Tag-Heuer.8b0d5e61971ddbe237b6.jpg",
@@ -18,10 +18,10 @@
     "static/media/w_store.jpg": "/watch-store/static/media/w_store.949584a780a1f3e299d9.jpg",
     "index.html": "/watch-store/index.html",
     "main.d2b6853b.css.map": "/watch-store/static/css/main.d2b6853b.css.map",
-    "main.e6a523ce.js.map": "/watch-store/static/js/main.e6a523ce.js.map"
+    "main.26db3747.js.map": "/watch-store/static/js/main.26db3747.js.map"
   },
   "entrypoints": [
     "static/css/main.d2b6853b.css",
-    "static/js/main.e6a523ce.js"
+    "static/js/main.26db3747.js"
   ]
 }
