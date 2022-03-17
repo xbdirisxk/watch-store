@@ -39,8 +39,8 @@ const Carts = ({ carts, setCarts }) => {
                             <th> </th>
                             <th>Product</th>
                             <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Subtotal</th>
+                            <th className='quantity-col'>Quantity</th>
+                            <th className='subtotal-col'>Subtotal</th>
                             <th>Remove</th>
                         </tr>
                     </thead>
@@ -52,15 +52,15 @@ const Carts = ({ carts, setCarts }) => {
                                         src={cart.imgUrl}
                                         alt='table pic'
                                         style={{
-                                            width: '120px',
+                                            width: '100px',
                                             height: '100px',
                                         }}
                                     />
                                 </td>
                                 <td>{cart.title}</td>
-                                <td>{cart.price}$</td>
-                                <td>
-                                    <div className='quantity-column'>
+                                <td className='price-col'>{cart.price}$</td>
+                                <td className='quantity-col'>
+                                    <div className='quantity-box'>
                                         <span className='quantity-num'>
                                             {cart.quantity}
                                         </span>
@@ -80,7 +80,9 @@ const Carts = ({ carts, setCarts }) => {
                                         />
                                     </div>
                                 </td>
-                                <td>{cart.price * cart.quantity}$</td>
+                                <td className='subtotal-col'>
+                                    {cart.price * cart.quantity}$
+                                </td>
                                 <td>
                                     <FiDelete
                                         className='delete-icon'

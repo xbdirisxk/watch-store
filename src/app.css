@@ -68,6 +68,10 @@ body {
     .navbar {
         padding: 10px 50px;
     }
+    .logo {
+        font-stretch: extra-condensed;
+        padding: 5px 10px;
+    }
 }
 
 /* ==========
@@ -265,12 +269,15 @@ h3 {
 .main-carts > h1 {
     flex: 1;
 }
-.main-carts > .list-carts {
+.list-carts {
     flex: 2;
     max-width: 800px;
     margin: 20px;
 }
-.quantity-column {
+.price-col {
+    color: hsl(0, 97%, 40%) !important;
+}
+.quantity-box {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -296,6 +303,19 @@ h3 {
     cursor: pointer;
     color: hsl(0, 100%, 23%);
     transition: 0.2s;
+}
+@media (max-width: 600px) {
+    .main-carts {
+        margin-top: 130px 10px 10px;
+    }
+    .list-carts {
+        margin: 20px;
+    }
+
+    .quantity-col,
+    .subtotal-col {
+        display: none;
+    }
 }
 
 /* ========
